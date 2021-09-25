@@ -1,0 +1,108 @@
+<html lang="en">
+    <head>
+        <title>Company Survey</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <main>
+            <h1 id="title">5tark Industries Survey Form</h1>
+            <p id="description">Your survey is very helpful for us! Thank you very much!</p>
+            <form id="survey-form">
+                <label id="name-label" for="name">Name</label>
+                <input 
+                    type="text"
+                    name="name"
+                    id="name"
+                    class="input-box"
+                    placeholder="Enter your name"
+                    required
+                />
+                <label id="email-label" for="email">Email</label>
+                <input 
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="input-box"
+                    placeholder="Enter your email"
+                    required
+                />
+                <label id="number-label" for="number">ID</label>    
+                <input 
+                    type="number"
+                    name="number"
+                    id="number"
+                    min="1"
+                    max="9999"
+                    class="input-box"
+                    placeholder="Enter your ID"
+                    required
+                />   
+                <div>
+                    <div>Your Role</div>
+                    <select id="dropdown" name="role" class="input-box" required>
+                        <option disabled selected>Select your Role</option>
+                        <option value="master">Master</option>
+                        <option value="senior">Senior</option>
+                        <option value="junior">Junior</option>
+                        <option value="fresher">Fresher</option>
+                    </select>
+                </div>    
+                <div id="radio-group">
+                    <div id="radio-legend">How long did you play game?</div>
+                    <label>
+                        <input type="radio" name="play-time" class="radio-button" value="less-1" checked>
+                        Less than 2 years
+                    </label>
+                    <br />
+                    <label>
+                        <input type="radio" name="play-time" class="radio-button" value="1-to-2">
+                        2 to 3 years
+                    </label>
+                    <br />
+                    <label>
+                        <input type="radio" name="play-time" class="radio-button" value="2-to-3">
+                        3 to 4 years
+                    </label>
+                    <br />
+                    <label>
+                        <input type="radio" name="play-time" class="radio-button" value="more-3">
+                        More than 4 years
+                    </label>
+                </div>   
+                <div id="checkbox-group">
+                    <div id="checkbox-legend">Which following game did you play?</div>
+                    <label>
+                        <input type="checkbox" name="game-played" value="league-of-legends" />
+                        League of Legends
+                    </label>
+                    <label>
+                        <input type="checkbox" name="game-played" value="csgo" />
+                        CSGO
+                    </label>
+                    <label>
+                        <input type="checkbox" name="game-played" value="pugb" />
+                        PUBG
+                    </label>
+                    <label>
+                        <input type="checkbox" name="game-played" value="dota2" />
+                        Dota 2
+                    </label>
+                    <label>
+                        <input type="checkbox" name="game-played" value="valorant" />
+                        Valorant
+                    </label>
+                </div>
+                <div id="comment-group">
+                    <div id="comment-label">More advice for us</div>
+                    <textarea
+                        id="comment-textarea"
+                        name="comments"
+                        placeholder="Enter your comments here..."
+                    ></textarea>
+                </div>
+                <button id="submit" type="submit">Submit</button>
+            </form>
+            <div>&nbsp;</div>
+        </main>
+    </body>
+</html>
