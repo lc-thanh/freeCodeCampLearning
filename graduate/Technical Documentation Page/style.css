@@ -1,0 +1,73 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 17px;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    margin: 0;
+}
+
+#navbar {
+    background-color: #06283D;
+    width: 260px;
+    color: white;
+    padding: 10px;
+    border-right: solid;
+    border-color: #47B5FF;
+}
+
+#navbar header {
+    line-height: 1.2;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+#navbar a {
+    color: #DFF6FF;
+    text-decoration: none;
+}
+
+#main-doc {
+    /* Take the remaining width */
+    flex: 1;
+
+    /* Make it scrollable */
+    overflow: auto;
+
+    background-color: #DFF6FF;
+    padding: 25px;
+    line-height: 1.5;
+}
+
+#main-doc a {
+    color: #1363DF;
+    text-decoration: none;
+}
+
+#main-doc p {
+    color: #06283D;
+}
+
+.main-section {
+    line-height: 1.5;
+}
+
+.main-section header {
+    margin: 0;
+    color: #1363DF;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#youtube-video {
+    padding: 20px;
+    background-color: #47B5FF;
+}
+
+#main-doc li {
+    margin-bottom: 10px;
+}
+
+footer {
+    bottom: 0;
+}
