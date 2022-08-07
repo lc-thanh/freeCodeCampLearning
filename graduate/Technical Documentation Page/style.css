@@ -1,72 +1,108 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 17px;
-    margin: 0;
-    box-sizing: border-box;
-    display: flex;
-    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 9fr;
+    width: 100vw;
+    height: 100vh;
 }
 
 #navbar {
+    overflow: auto;
+
     background-color: #06283D;
-    width: 260px;
     color: white;
-    padding: 10px;
+
     border-right: solid;
     border-color: #47B5FF;
 }
-
 #navbar header {
+    padding: 15px 10px 10px 10px;
     line-height: 1.2;
     font-size: 30px;
     font-weight: 600;
+    margin-bottom: 10px;
 }
-
-#navbar a {
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#navbar li {
+    width: 100%;
+    padding: 10px 0 10px 20px;
+    list-style: none;
+    border-top: solid;
+    border-color: #DFF6FF;
+    border-width: 1px;
+}
+#navbar li a {
+    color: white;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+}
+#navbar footer a {
     color: #DFF6FF;
     text-decoration: none;
 }
 
 #main-doc {
-    /* Take the remaining width */
-    flex: 1;
-
-    /* Make it scrollable */
     overflow: auto;
-
     background-color: #DFF6FF;
     padding: 25px;
-    line-height: 1.5;
 }
 
-#main-doc a {
+.main-section a {
     color: #1363DF;
     text-decoration: none;
 }
-
-#main-doc p {
+.main-section p {
+    margin-bottom: 10px;
+    line-height: 1.5;
     color: #06283D;
 }
-
-.main-section {
-    line-height: 1.5;
-}
-
 .main-section header {
-    margin: 0;
+    margin: 0 0 10px 0;
     color: #1363DF;
     font-size: 30px;
     font-weight: 500;
 }
-
-#youtube-video {
-    padding: 20px;
-    background-color: #47B5FF;
-}
-
-#main-doc li {
+.main-section li {
     margin-bottom: 10px;
 }
+
+
+#youtube_video_container {
+    width: 60%;
+    margin: auto;
+    padding: 10px 0 10px 0;
+}
+#youtube_video {
+    position: relative;
+    background-color: #47B5FF;
+    width: 100%;
+    padding-bottom: 56.25%; 
+    height: 0;
+  }
+  #youtube_video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 90%;
+    height: 90%;
+  }
 
 footer {
     bottom: 0;
