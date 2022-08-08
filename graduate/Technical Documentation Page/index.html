@@ -6,6 +6,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     </head>
     <body>
         <div class="container">
@@ -19,11 +21,13 @@
             </header>
 
             <ul>
-                <li><a href="#what_is_oop">What is OOP?</a></li>
-                <li><a href="#structure_of_oop">Structure of OOP</a></li>
-                <li><a href="#principles_of_OOP">Principle of OOP</a></li>
+                <li><a class="nav-link" href="#what_is_oop">What is OOP?</a></li>
+                <li><a class="nav-link" href="#structure_of_oop">Structure of OOP</a></li>
+                <li><a class="nav-link" href="#principles_of_OOP">Principle of OOP</a></li>
+                <li><a class="nav-link" href="#examples_of_oop">Examples of OOP</a></li>
+                <li><a class="nav-link" href="#benefits_of_oop">Benefits of OOP</a></li>
+                <li><a class="nav-link" href="#criticism_of_oop">Criticism of OOP</a></li>
             </ul>
-            <footer>Source by: <a href="https://www.techtarget.com/searchapparchitecture/definition/object-oriented-programming-OOP" target="_blank">TechTarget</a></footer>
         </nav>
     
         <!-- Main -->
@@ -64,13 +68,189 @@
             </section>
             <section id="examples_of_oop" class="main-section">
                 <header>What are examples of object-oriented programming languages?</header>
+                <p>While <a href="https://www.techtarget.com/whatis/definition/Simula-simulation-language" target="_blank">Simula</a> is credited as being the first object-oriented programming language, many other programming languages are used with OOP today. But some programming languages pair with OOP better than others. For example, programming languages considered pure OOP languages treat everything as objects. Other programming languages are designed primarily for OOP, but with some procedural processes included.</p>
+                <p>For example, popular pure OOP languages include:</p>
+                <ul>
+                    <li><a href="https://www.techtarget.com/whatis/definition/Ruby" target="_blank">Ruby</a></li>
+                    <li>Scala</li>
+                    <li>JADE</li>
+                    <li>Emerald</li>
+                </ul>
+                <p>Programming languages designed primarily for OOP include:</p>
+                <ul>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>C++</li>
+                </ul>
+                <p>Other programming languages that pair with OOP include:</p>
+                <ul>
+                    <li>Visual Basic .NET</li>
+                    <li><a href="https://www.techtarget.com/whatis/definition/Personal-Home-Page-PHP" target="_blank">PHP</a></li>
+                    <li>JavaScript</li>
+                </ul>
+
+                <p style="font-size: 20px;">Here are some examples of OOP:</p>
+                <!-- code start -->
+<pre class="prettyprint">
+<code>public class Cat {
+    /*
+    Instance variables: states of Cat
+    */
+    String name;
+    int age;
+    String color;
+    String breed;
+
+    /*
+    Instance methods: behaviors of Cat
+    */
+    void sleep(){
+        System.out.println("Sleeping");
+    }
+    void play(){
+        System.out.println("Playing");
+    }
+    void feed(){
+        System.out.println("Eating");
+    }
+
+}</code></pre>
+            <!-- code end -->
+
+            <!-- code start -->
+<pre class="prettyprint">
+<code>public class Main {
+    public static void main(String[] args) {
+        Cat thor = new Cat();
+        Cat rambo = new Cat();
+    }
+}</code></pre>
+            <!-- code end -->
+
+            <!-- code start -->
+<pre class="prettyprint">
+<code>public class Main {
+
+    public static void main(String[] args) {
+        /*
+        Creating objects
+        */
+        Cat thor = new Cat();
+        Cat rambo = new Cat();
+
+        /*
+        Defining Thor cat
+        */
+        thor.name = "Thor";
+        thor.age = 3;
+        thor.breed = "Russian Blue";
+        thor.color = "Brown";
+
+        thor.sleep();
+
+        /*
+        Defining Rambo cat
+        */
+        rambo.name = "Rambo";
+        rambo.age = 4;
+        rambo.breed = "Maine Coon";
+        rambo.color = "Brown";
+
+        rambo.play();
+    }
+
+}</code></pre>
+            <!-- code end -->
+
+            <!-- code start -->
+<pre class="prettyprint">
+<code>public class Album {
+    public String name;
+    public String artist;
+    public double price;
+    public int numberOfCopies;
+    public void sellCopies(){
+        if(numberOfCopies > 0){
+            numberOfCopies--;
+            System.out.println("One album has sold!");
+        }
+        else{
+            System.out.println("No more albums available!");
+        }
+    }
+    public void orderCopies(int num){
+        numberOfCopies += num;
+    }
+}</code></pre>
+            <!-- code end -->
+
+            <!-- code start -->
+<pre class="prettyprint">
+<code>public class StockKeeper {
+    public String name;
+    public StockKeeper(String name){
+        this.name = name;
+    }
+    public void manageAlbum(Album album, String name, String artist, double price, int numberOfCopies){
+      /*
+       Defining states and behaviors for album
+       */
+        album.name = name;
+        album.artist = artist;
+        album.price = price;
+        album.numberOfCopies = numberOfCopies;
+
+       /*
+       Printing album details
+        */
+        System.out.println("Album managed by :"+ this.name);
+        System.out.println("Album details::::::::::");
+        System.out.println("Album name : " + album.name);
+        System.out.println("Album artist : " + album.artist);
+        System.out.println("Album price : " + album.price);
+        System.out.println("Album number of copies : " + album.numberOfCopies);
+    }
+}</code></pre>
+            <!-- code end -->
             </section>
             <section id="benefits_of_oop" class="main-section">
                 <header>What are the benefits of OOP?</header>
+                <p>Benefits of OOP include:</p>
+                <ul>
+                    <li><b>Modularity</b>. Encapsulation enables objects to be self-contained, making troubleshooting and collaborative development easier.</li>
+                    <li><b>Reusability</b>. Code can be reused through inheritance, meaning a team does not have to write the same code multiple times.</li>
+                    <li><b>Productivity</b>. Programmers can construct new programs quicker through the use of multiple libraries and reusable code.</li>
+                    <li><b>Easily upgradable and scalable</b>. Programmers can implement system functionalities independently.</li>
+                    <li><b>Interface descriptions</b>. Descriptions of external systems are simple, due to message passing techniques that are used for objects communication.</li>
+                    <li><b>Security</b>. Using encapsulation and abstraction, complex code is hidden, software maintenance is easier and <a href="https://www.techtarget.com/searchunifiedcommunications/definition/Internet-Protocol" target="_blank">internet protocols</a> are protected.</li>
+                    <li><b>Flexibility</b>. Polymorphism enables a single function to adapt to the class it is placed in. Different objects can also pass through the same interface.</li>
+                </ul>
             </section>
             <section id="criticism_of_oop" class="main-section">
                 <header>Criticism of OOP</header>
+                <p>The object-oriented programming model has been criticized by developers for multiple reasons. The largest concern is that OOP overemphasizes the data component of software development and does not focus enough on computation or algorithms. Additionally, OOP code may be more complicated to write and take longer to compile.</p>
+                <p>Alternative methods to OOP include:</p>
+                <ul>
+                    <li><b>Functional programming</b>. This includes languages such as Erlang and Scala, which are used for telecommunications and fault tolerant systems.</li>
+                    <li><b>Structured or modular programming</b>. This includes languages such as PHP and C#.</li>
+                    <li><b><a href="https://www.techtarget.com/whatis/definition/imperative-programming" target="_blank">Imperative programming</a>.</b> This alternative to OOP focuses on function rather than models and includes C++ and Java.</li>
+                    <li><b><a href="https://www.techtarget.com/searchitoperations/definition/declarative-programming" target="_blank">Declarative programming</a>.</b> This programming method involves statements on what the task or desired outcome is but not how to achieve it. Languages include Prolog and Lisp.</li>
+                    <li><b>Logical programming</b>. This method, which is based mostly in formal logic and uses languages such as Prolog, contains a set of sentences that express facts or rules about a problem domain. It focuses on tasks that can benefit from rule-based logical queries.</li>
+                </ul>
+                <p>Most advanced programming languages enable developers to combine models, because they can be used for different programming methods. For example, JavaScript can be used for OOP and functional programming.</p>
+                <p style="font-style: italic;">Developers who are working with OOP and microservices can address common microservices issues by applying the principles of OOP.</p>
             </section>
+            <section id="publish_date">
+                <p>This was last updated in July 2021</p>
+            </section>
+            <footer>
+                <div>
+                    Source by: <a href="https://www.techtarget.com/searchapparchitecture/definition/object-oriented-programming-OOP" target="_blank">TechTarget</a>
+                </div>
+                <div>
+                    Java code by: <a href="https://www.freecodecamp.org/news/java-object-oriented-programming-system-principles-oops-concepts-for-beginners/" target="_blank">freeCodeCamp</a>
+                </div>
+            </footer>
         </main>
         </div>
     </body>
