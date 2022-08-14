@@ -19,6 +19,7 @@ html {
     background-image: url("./background.png");
     background-position: 10% 0%;
     background-size: cover;
+    z-index: 1;
 }
 #navbar #logo {
     color: white;
@@ -63,6 +64,7 @@ html {
 }
 #welcome-section-content h1 {
     margin-top: 30px;
+    margin-left: -2px;
     font-size: 70px;
 }
 #welcome-section-content h3 {
@@ -82,9 +84,34 @@ html {
     width: 100%;
     background-color: #272626;
 }
-#about-content {
+#about-container {
     position: absolute;
-    top: 48%;
+    max-width: 100%;
+    top: 16%;
     color: white;
-    padding: 0 170px 0 170px;
+    padding: 0 210px 0 150px;
+    display: flex;
+}
+#about-image {
+    max-width: 400px;
+    height: auto;
+}
+#about-content {
+    margin: auto;
+    margin-left: 70px;
+}
+#about-content h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+#about-content p {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+#projects {
+    height: 100vh;
+    width: 100%;
+
 }
