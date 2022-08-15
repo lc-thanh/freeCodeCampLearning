@@ -218,8 +218,8 @@ html {
 }
 #projects-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-row-gap: 40px;
     justify-items: center;
     align-items: center;
@@ -326,6 +326,10 @@ footer a {
     #skills {
         padding: 250px 10% 50px 10%;
     }
+    #projects-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
     #contact-links-container {
         padding: 0 8% 0 8%;
     }
@@ -333,4 +337,11 @@ footer a {
         font-size: 2vw;
     }
     
+}
+
+@media (max-width: 1060px) {
+    #projects-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
 }
